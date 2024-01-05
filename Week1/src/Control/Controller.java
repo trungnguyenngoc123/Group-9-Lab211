@@ -11,13 +11,14 @@ public class Controller extends Menu {
     }
     @Override
     public void execute(int ch) {
-        Controller mg = new Controller();
+        Controller ct = new Controller();
         int choice = 0;
         switch(ch){
             case 1:
-                mg.sortOption();
+                ct.sortOption();
                 break;
             case 2:
+                ct.searchOption();
                 break;
             case 3:
                 System.exit(0);
@@ -64,19 +65,23 @@ public class Controller extends Menu {
         System.out.print("\n3.Back");
         System.out.print("\nEnter your choice: ");
         int choice = Validation.checkInputPositiveInt();
+        
         do{
         Manager mg = new Manager();
         switch(choice){
             case 1:
-                
+                int size = mg.inputSizeOfArray3();
+                Model []c = mg.inputValueOfArray3(size);
+                int target = mg.inputIndexOfSearch();
+                int result = mg.binarySearch(c, target);
+                if (result == -1){
+                    System.out.println(target + " is not found");
+                }else{
+                    System.out.println(target + " is found at index: "+ result);
+                }
                 break;
             case 2:
-                int left = 0, right = 0;
-                int m = mg.inputSizeOfArray2();
-                Model[] b = mg.RandomValueOfArray(m);
-                mg.partition(b, left, right);
-                mg.quicksort(b, 0, m - 1);
-                mg.print2(b);
+                
                 break;
             case 3:
                 break;

@@ -141,6 +141,7 @@ public class Manager extends Model {
     public static int inputIndexOfSearch(){
             System.out.print("\nEnter search value: ");
             int target = Validation.checkInputPositiveInt();
+            
             return target;
         }
     public static Model[] inputValueOfArray3(int size) {//trả về một mảng các đối tượng (size, value) thuộc kiểu Model
@@ -170,7 +171,7 @@ public class Manager extends Model {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             int comparisonResult = models[mid].getValue() - target;
-            if (models[mid].equals(target)) {
+            if (comparisonResult == 0) {
                 return mid; // Element found, return its index
             } else if (comparisonResult < 0) {
                 left = mid + 1; // Search in the right half
