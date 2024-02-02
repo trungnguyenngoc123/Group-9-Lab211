@@ -1,5 +1,6 @@
 package Controller;
 
+import Common.Manager;
 import Model.Candidate;
 import java.util.ArrayList;
 import View.Menu;
@@ -16,13 +17,13 @@ public class Controller extends Menu {
     public void execute(int ch) {
         switch(ch) {
             case 1:
-                mg.createCandidate(candidates, 0);
-                break;
-            case 2:
                 mg.createCandidate(candidates, 1);
                 break;
-            case 3:
+            case 2:
                 mg.createCandidate(candidates, 2);
+                break;
+            case 3:
+                mg.createCandidate(candidates, 3);
                 break;
             case 4:
                 if(candidates.isEmpty()){

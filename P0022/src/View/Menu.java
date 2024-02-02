@@ -3,7 +3,7 @@ package View;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public abstract class Menu<T> {
+public class Menu<T> {
     private String title;
     private ArrayList<T> choices;
 
@@ -48,7 +48,7 @@ public abstract class Menu<T> {
         return sc.nextInt();
     }    
 //----------------------------------------------------
-    public abstract void execute(int ch);
+    public void execute(int ch){};
 //----------------------------------------------------
     public void run(){
         while(true){
