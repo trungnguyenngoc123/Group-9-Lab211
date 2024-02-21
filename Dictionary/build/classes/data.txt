@@ -1,0 +1,16 @@
+Cable, Day cap
+TV, TV
+Keyboard, Ban phim
+Manual, binh thuong
+goat, con de
+Fan, Quat
+road, con duong
+Book, Sach
+Phone, Dien thoai
+Cat, Con meo
+Gas, Ga
+name, ten
+Dog, Con cho
+Kill, Giet
+Final, Cuoi cung
+Display, Man hinh
