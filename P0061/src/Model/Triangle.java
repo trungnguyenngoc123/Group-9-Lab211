@@ -1,6 +1,7 @@
 
 package Model;
 
+import Common.Calculate;
 import View.View;
 
 public class Triangle extends Shape{
@@ -8,6 +9,7 @@ public class Triangle extends Shape{
     private double b;
     private double c;
     View view = new View();
+    Calculate ct = new Calculate();
     public Triangle() {
     }
 
@@ -52,12 +54,11 @@ public class Triangle extends Shape{
 
     @Override
     public double getArea() {
-        double p = (a + b + c) / 2;
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        return ct.getAreaTri(a, b, c);
     }
 
     @Override
     public double getPerimeter() {
-        return a + b + c;
+        return ct.getPerimeterTri(a, b, c);
     }
 }

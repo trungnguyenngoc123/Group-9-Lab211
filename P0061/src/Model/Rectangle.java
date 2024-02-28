@@ -1,13 +1,15 @@
 
 package Model;
 
+import Common.Calculate;
+import View.View;
+
 public class Rectangle extends Shape {
 
     private double width;
-    private double length;
-
-    
-
+    private double length;    
+    Calculate ct = new Calculate();
+    View view = new View();
     public Rectangle() {
     }
 
@@ -31,21 +33,21 @@ public class Rectangle extends Shape {
         this.length = length;
     }
     @Override
-    public double getArea() {
-        return width * length;
+    public double getArea() {//test
+        return ct.getAreaRec(width, length);
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * (width + length);
+        return ct.getPerimeterRec(width, length);
     }
 
     @Override
     public void printResult() {
-        System.out.println("Width: " + width);
-        System.out.println("Length: " + length);
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+        view.displayMess("Width: " + width);
+        view.displayMess("Length: " + length);
+        view.displayMess("Area: " + getArea());
+        view.displayMess("Perimeter: " + getPerimeter());
     }
 
 }

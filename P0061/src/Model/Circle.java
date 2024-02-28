@@ -1,10 +1,14 @@
 
 package Model;
 
+import Common.Calculate;
+import View.View;
+
 public class Circle extends Shape {
 
     private double radius;
-
+    Calculate ct = new Calculate();
+    View view = new View();
     public Circle() {
     }
 
@@ -21,18 +25,18 @@ public class Circle extends Shape {
     }
     @Override
     public double getArea() {
-        return Math.PI * radius * radius;
+        return ct.getAreaCir(radius);
     }
 
     @Override
     public double getPerimeter() {
-        return Math.PI * 2 * radius;
+        return ct.getPerimeterCir(radius);
     }
 
     @Override
     public void printResult() {
-        System.out.println("Radius: " + this.radius);
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+        view.displayMess("Radius: " + this.radius);
+        view.displayMess("Area: " + getArea());
+        view.displayMess("Perimeter: " + getPerimeter());
     }    
 }
