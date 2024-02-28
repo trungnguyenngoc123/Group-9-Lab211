@@ -7,7 +7,13 @@ public class Validation {
             try {
                 System.out.print(mess);
                 double result = Double.parseDouble(input.inputStr());
+                if(result>0){
                 return result;
+                }
+                else{
+                    throw new NumberFormatException();
+                }
+                
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input, please input again!");
             }
