@@ -45,7 +45,7 @@ public class Calculate {
     }
     
     public Circle inputCircle(){
-        while (true)  { //abcbcbc
+        while (true)  { 
             double radius = vd.checkInputDouble("Please input radius of Circle: ");
             return new Circle(radius);
         }
