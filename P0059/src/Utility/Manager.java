@@ -18,6 +18,7 @@ public class Manager {
     private final Validation validate = new Validation();
 
     public void getPerson() {
+        //avc
         System.out.println("--------------Person info---------------");
         String path = validate.filePath();
         double money = validate.getMoney();
