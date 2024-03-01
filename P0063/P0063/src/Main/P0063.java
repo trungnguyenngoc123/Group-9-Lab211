@@ -5,10 +5,6 @@ import Controller.Control;
 
 
 
-/**
- *
- * @author MINH CHIEN
- */
 public class P0063 {
 
    

@@ -10,7 +10,7 @@ public class Control extends Menu{
   Manager mg = new Manager();
 
     public Control() {
-     super("Management Person Program", new String[]{"Input information ","Show 3 persons information","Exit"});
+     super("Management Person Program", new String[]{"Input 3 persons information ","Show 3 persons information","Exit"});
         
 
     }
